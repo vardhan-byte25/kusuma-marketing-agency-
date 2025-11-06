@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kusuma Marketing Agency</title>
+  <style>
+    :root{
+      --bg:#EAD8FF; /* light purple */
+      --card:#0b0b0b; /* black card */
+      --text:#ffffff;
+      --accent:#B992FF;
+    }
+    html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);-webkit-font-smoothing:antialiased;display:flex;align-items:center;justify-content:center;}
+    .card {
+      width:92%;
+      max-width:900px;
+      background:linear-gradient(180deg, rgba(8,8,8,1), rgba(24,24,24,0.98));
+      color:var(--text);
+      border-radius:18px;
+      padding:26px;
+      box-shadow:0 18px 40px rgba(10,10,10,0.45);
+      display:flex;
+      gap:20px;
+      align-items:center;
+      box-sizing:border-box;
+      position:relative;
+    }
+    .left {flex:0 0 200px; display:flex;flex-direction:column;align-items:center;gap:10px;}
+    .logo { width:110px;height:110px;border-radius:14px;background:linear-gradient(135deg,#5a00ff,#ff5ab4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:20px;box-shadow:0 8px 24px rgba(0,0,0,0.4);}
+    .title{font-size:20px;margin:0}
+    .lead{margin:8px 0 16px 0;color:#ddd;line-height:1.45}
+    .clients{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .client{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-size:13px;color:#f2f2f2}
+    .contact{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:none;cursor:pointer}
+    .btn.call{background:#fff;color:#111}
+    .btn.wa{background:#25D366;color:#021}
+    .btn.mail{background:#fff;color:#111}
+    a.tel{color:var(--text);text-decoration:none;font-weight:700}
+    .right{flex:1 1 auto;min-width:0}
+    .footer{margin-top:14px;font-size:13px;color:#cfcfe0;opacity:0.95}
+    /* blobs */
+    .blob{position:absolute;border-radius:50%;filter:blur(36px);opacity:0.55;pointer-events:none}
+    .b1{width:320px;height:320px;background:radial-gradient(circle at 30% 30%,#FFD6F3,#B992FF);top:-80px;left:-60px}
+    .b2{width:260px;height:260px;background:radial-gradient(circle at 60%40%,#C2F0FF,#9BD6FF);bottom:-80px;right:-40px;opacity:0.45}
+    @media (max-width:720px){
+      .card{flex-direction:column; padding:18px}
+      .left{flex-direction:row;align-items:center;justify-content:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="blob b1" aria-hidden></div>
+  <div class="blob b2" aria-hidden></div>
+
+  <div class="card" role="main" aria-label="Kusuma Marketing Agency">
+    <div class="left">
+      <div class="logo">KM</div>
+      <div style="text-align:center;color:#ddd;font-size:14px;">Kusuma<br>Marketing Agency</div>
+    </div>
+
+    <div class="right">
+      <h1 class="title">KUSUMA — Marketing that grows business</h1>
+      <p class="lead">We help local businesses grow with smart marketing campaigns and attentive client care. Call or message Kusuma to start improving your business today.</p>
+
+      <div class="clients" aria-hidden>
+        <div class="client">ABC Builders — Bengaluru</div>
+        <div class="client">GreenLeaf Interiors — Mysuru</div>
+        <div class="client">Bright Vision Tech — Mangalore</div>
+      </div>
+
+      <div class="contact">
+        <a class="btn call" href="tel:8861201974" title="Call Kusuma">📞 Call <span style="margin-left:6px">+91 88612 01974</span></a>
+        <a class="btn wa" href="https://wa.me/918861201974" target="_blank" rel="noreferrer">💬 WhatsApp <span style="margin-left:6px">Chat</span></a>
+        <a class="btn mail" href="mailto:kusumasumedh@gmail.com">✉️ Email <span style="margin-left:6px">kusumasumedh@gmail.com</span></a>
+      </div>
+
+      <div class="footer">© Kusuma Marketing Agency • Helping small businesses grow</div>
+    </div>
+  </div>
+</body>
+</html>
