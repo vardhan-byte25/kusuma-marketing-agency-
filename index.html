@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kusuma Marketing Agency</title>
+  <title>Kusuma Marketing Company</title>
   <style>
     body {
       margin: 0;
@@ -17,9 +17,23 @@
       overflow-x: hidden;
     }
 
-    h1 {
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
       margin-top: 40px;
-      font-size: 2.2em;
+    }
+
+    header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 2em;
       letter-spacing: 1px;
       text-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
@@ -54,11 +68,57 @@
       transform: scale(1.05);
     }
 
-    .vision {
+    .vision, .offers {
       font-size: 1.1em;
       line-height: 1.6;
       color: #eaeaea;
       margin: 20px;
+    }
+
+    .offers h2 {
+      margin-top: 30px;
+      color: #FFCCFF;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: rgba(255, 255, 255, 0.08);
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #fff;
+      color: #111;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn:hover {
+      background: #eee;
+      transform: translateY(-3px);
     }
 
     footer {
@@ -82,11 +142,12 @@
       align-items: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       cursor: pointer;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .qr-button:hover {
       transform: scale(1.1);
+      box-shadow: 0 0 20px #25D366;
     }
 
     .qr-button img {
@@ -96,9 +157,12 @@
     }
 
     @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+      }
       h1 {
-        font-size: 1.6em;
-        margin-top: 20px;
+        font-size: 1.5em;
+        margin-top: 10px;
       }
       .images img {
         width: 90%;
@@ -109,7 +173,10 @@
 </head>
 <body>
 
-  <h1>KUSUMA — Marketing that grows business</h1>
+  <header>
+    <img src="Screenshot 2025-11-06 115943.png" alt="Kusuma Marketing Logo">
+    <h1>KUSUMA MARKETING COMPANY — Marketing that grows business</h1>
+  </header>
 
   <div class="container">
     <div class="images">
@@ -120,10 +187,27 @@
     <div class="vision">
       <h2>Our Vision</h2>
       <p>
-        At Kusuma Marketing Agency, we aim to empower startups and small businesses to achieve remarkable growth.
-        We focus on building creative, data-driven marketing strategies that connect your brand with the right audience
-        — helping you rise faster, stronger, and smarter in today’s competitive world.
+        At Kusuma Marketing Company, we aim to empower startups and small businesses to achieve remarkable growth.
+        We focus on building creative, data-driven marketing strategies that connect your brand with the right audience —
+        helping you rise faster, stronger, and smarter in today’s competitive world.
       </p>
+    </div>
+
+    <div class="offers">
+      <h2>What We Offer</h2>
+      <ul>
+        <li>🚀 Performance Marketing Campaigns</li>
+        <li>📊 Analytics & Insights</li>
+        <li>🤝 Partnership & PR Support</li>
+        <li>🎨 Brand Identity Creation</li>
+        <li>🌐 Digital Presence Setup</li>
+      </ul>
+    </div>
+
+    <div class="contact-buttons">
+      <a class="btn" href="tel:+918861201974">📞 Call Kusuma</a>
+      <a class="btn" href="mailto:kusumasumedh@gmail.com">✉️ Email Kusuma</a>
+      <a class="btn" href="https://wa.me/918861201974" target="_blank">💬 WhatsApp Chat</a>
     </div>
   </div>
 
