@@ -11,7 +11,17 @@
       --text:#ffffff;
       --accent:#B992FF;
     }
-    html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);-webkit-font-smoothing:antialiased;display:flex;align-items:center;justify-content:center;}
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
     .card {
       width:92%;
       max-width:900px;
@@ -25,6 +35,7 @@
       align-items:center;
       box-sizing:border-box;
       position:relative;
+      z-index:2;
     }
     .left {flex:0 0 200px; display:flex;flex-direction:column;align-items:center;gap:10px;}
     .logo { width:110px;height:110px;border-radius:14px;background:linear-gradient(135deg,#5a00ff,#ff5ab4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:20px;box-shadow:0 8px 24px rgba(0,0,0,0.4);}
@@ -40,23 +51,37 @@
     a.tel{color:var(--text);text-decoration:none;font-weight:700}
     .right{flex:1 1 auto;min-width:0}
     .footer{margin-top:14px;font-size:13px;color:#cfcfe0;opacity:0.95}
+
     /* blobs */
-    .blob{position:absolute;border-radius:50%;filter:blur(36px);opacity:0.55;pointer-events:none}
+    .blob{position:absolute;border-radius:50%;filter:blur(36px);opacity:0.55;pointer-events:none;z-index:1;}
     .b1{width:320px;height:320px;background:radial-gradient(circle at 30% 30%,#FFD6F3,#B992FF);top:-80px;left:-60px}
     .b2{width:260px;height:260px;background:radial-gradient(circle at 60%40%,#C2F0FF,#9BD6FF);bottom:-80px;right:-40px;opacity:0.45}
+
+    /* image gallery */
+    .image-gallery {
+      margin: 40px auto;
+      text-align: center;
+      z-index:2;
+    }
+    .image-gallery h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .image-gallery img {
+      margin: 10px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
     @media (max-width:720px){
       .card{flex-direction:column; padding:18px}
       .left{flex-direction:row;align-items:center;justify-content:flex-start}
+      .image-gallery img { width: 90%; }
     }
   </style>
 </head>
 <body>
-  <div class="image-gallery">
-    <h2>Our Images</h2>
-    <img src="image1.jpg" alt="First Image" width="300">
-    <img src="image2.png" alt="Second Image" width="300">
-    <img src="image3.webp" alt="Third Image" width="300">
-  </div>
   <div class="blob b1" aria-hidden></div>
   <div class="blob b2" aria-hidden></div>
 
@@ -85,6 +110,13 @@
       <div class="footer">© Kusuma Marketing Agency • Helping small businesses grow</div>
     </div>
   </div>
+
+  <!-- Image Section BELOW the card -->
+  <div class="image-gallery">
+    <h2>Our Images</h2>
+    <img src="image1.jpg" alt="First Image">
+    <img src="image2.png" alt="Second Image">
+    <img src="image3.webp" alt="Third Image">
+  </div>
 </body>
 </html>
-
